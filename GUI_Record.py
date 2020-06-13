@@ -39,7 +39,7 @@ def initialize(board):
     """
     global eeg
     eeg = []
-    time.sleep(1)
+    tm.sleep(1)
     board.ser.write(b'v')
     tm.sleep(1)
     #board.enable_filters()
