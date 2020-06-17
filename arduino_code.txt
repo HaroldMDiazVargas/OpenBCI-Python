@@ -1,0 +1,45 @@
+char option;
+int Ain4 = 4;
+int Ain9_1 = 9;
+int Bin7_1 = 7;
+int Bin8 = 8;
+int PWMA = 5;
+int PWMB = 6;
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+//  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+  pinMode(Ain9_1, OUTPUT);
+  pinMode(Ain4, OUTPUT);
+  pinMode(Bin7_1, OUTPUT);
+  pinMode(Bin8, OUTPUT);
+  pinMode(PWMA, OUTPUT);
+  pinMode(PWMB, OUTPUT);
+
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(PWMA, HIGH);
+  digitalWrite(PWMB, HIGH);
+//  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+//  delay(1000);                       // wait for a second
+//  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+//  delay(1000); // wait for a second
+  if (Serial.available()>0){
+      option=Serial.read();
+      if(option=='1') {
+        digitalWrite(Ain9_1, LOW);
+        digitalWrite(Ain4, HIGH);
+        digitalWrite(Bin7_1, LOW);
+        digitalWrite(Bin8, HIGH);
+        }
+      if(option=='2') {
+        digitalWrite(Ain9_1, HIGH);
+        digitalWrite(Ain4, LOW);
+        digitalWrite(Bin7_1, HIGH);
+        digitalWrite(Bin8, LOW);
+        }
+  }
+}
+
