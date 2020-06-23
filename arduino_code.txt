@@ -33,13 +33,23 @@ void loop() {
         digitalWrite(Ain4, HIGH);
         digitalWrite(Bin7_1, LOW);
         digitalWrite(Bin8, HIGH);
+        delay(150);
+        digitalWrite(Ain9_1, LOW);
+        digitalWrite(Ain4, LOW);
+        digitalWrite(Bin7_1, LOW);
+        digitalWrite(Bin8, LOW);
+        
         }
       if(option=='2') {
         digitalWrite(Ain9_1, HIGH);
         digitalWrite(Ain4, LOW);
         digitalWrite(Bin7_1, HIGH);
         digitalWrite(Bin8, LOW);
+        delay(150);
+        digitalWrite(Ain9_1, LOW);
+        digitalWrite(Ain4, LOW);
+        digitalWrite(Bin7_1, LOW);
+        digitalWrite(Bin8, LOW);
         }
   }
 }
-
